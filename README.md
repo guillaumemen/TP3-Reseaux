@@ -94,9 +94,9 @@ Les mots taper dans le PowerShell apparaise bien dans la vm.
 
 Préparation fillaire 
 
-+PC1 IP : 192.168.112.1/30
+- PC1 IP : 192.168.112.1/30
 
-+PC2 IP : 192.168.112.2/30
+- PC2 IP : 192.168.112.2/30
 
 Vérification des ping PC 
 
@@ -106,8 +106,8 @@ Changer l'ip dans la VM je tape **nano /etc/sysconfig/network-scripts/ifcfg-enp0
 
 Je modifie l'ip en :
 
-**+VM1 (sur PC1) : 192.168.101.10**
-**+VM2 (sur PC2) : 192.168.102.10**
+** - VM1 (sur PC1) : 192.168.101.10**
+** - VM2 (sur PC2) : 192.168.102.10**
 
 #### Check
  Les ping entre les differente s'effectue bien 
