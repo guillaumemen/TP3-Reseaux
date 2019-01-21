@@ -58,3 +58,53 @@ Là il s'agit de la même chose que la ligne précedente mais pour le réseau 19
 - commande dig sur la VM :
 dig Nous permet de trouver l'adresse ip d'un site internet
     - pour **ynov.com
+    
+ ## II. Notion de ports et SSH    
+    
+### 1. Exploration des ports locaux
+
+On va commencé par taper ss -4lnp,
+Cela nous donne **sshh** ecoute sur le port 22 
+
+### 2. SSH
+
+On va commencer par l'installation de putty, suite a cela je rentre **l'ip de ma vm 192.168.127.10**, ssh par defaut. je tape mon login et mon mot de passe et la connection et effectuer 
+
+### 3. Firewall
+#### A. SSH :-
+Le ssh est bien ouvert sur le **port 2222**
+
+je doit donc autorisé le firewall avec la conexion sur le port 2222 la commande **firewall-cmd --add-port=2222/tcp –permanent**
+
+Connexion reussite 
+
+#### B. netcat
+
+Il faut installer netcat avec la commande "yum install nc"
+
+Dans la Console de la vm : **ncat -l -p 5454** 
+
+Dans le PowerShell je tape **ncat 192.168.127.10 5454**
+
+Les mots taper dans le PowerShell apparaise bien dans la vm.
+
+## III. Routage statique
+
+###1. Préparation des hôtes
+
+Préparation fillaire 
+
+PC1 IP : 192.168.112.1/30
+PC2 IP : 192.168.112.2/30
+Vérification des ping PC 
+
+Préparation VirtualBox
+
+Changer l'ip dans la VM je tape **nano /etc/sysconfig/network-scripts/ifcfg-enp0s8**
+Je modifie l'ip en **-VM1 (sur PC1) : 192.168.101.10**
+                   **-VM2 (sur PC2) : 192.168.102.10**
+
+
+
+
+
