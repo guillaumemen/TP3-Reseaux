@@ -123,7 +123,7 @@ Je modifie l'ip en :
   
   + Propriétés, démarrage sélectionner **"Automatique"**
 
-###2. Configuration du routage
+### 2. Configuration du routage
 
 PC1 : 192.168.112.1/30 accede au reseaux 12 et 1 : **route add 192.168.102.0 mask 255.255.255.0 192.168.112.2**
 
