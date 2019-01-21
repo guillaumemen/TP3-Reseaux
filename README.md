@@ -94,17 +94,27 @@ Les mots taper dans le PowerShell apparaise bien dans la vm.
 
 Préparation fillaire 
 
-PC1 IP : 192.168.112.1/30
-PC2 IP : 192.168.112.2/30
++PC1 IP : 192.168.112.1/30
+
++PC2 IP : 192.168.112.2/30
+
 Vérification des ping PC 
 
 Préparation VirtualBox
 
 Changer l'ip dans la VM je tape **nano /etc/sysconfig/network-scripts/ifcfg-enp0s8**
-Je modifie l'ip en **-VM1 (sur PC1) : 192.168.101.10**
-                   **-VM2 (sur PC2) : 192.168.102.10**
 
+Je modifie l'ip en :
 
+**+VM1 (sur PC1) : 192.168.101.10**
+**+VM2 (sur PC2) : 192.168.102.10**
+
+#### Check
+ Les ping entre les differente s'effectue bien 
+
+### Activation du routage sur les PCs
+
+Modification de la clé registre HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ Services\Tcpip\Parameters\IPEnableRouter en passant sa valeur de 0 à 1
 
 
 
